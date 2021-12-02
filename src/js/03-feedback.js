@@ -7,12 +7,12 @@ const STORAGE_KEY = 'feedback-form-state';
 const formData = {};
 
 form.addEventListener('submit', onFormSubmit);
-textArea.addEventListener('input', throttle(onTextAreaInput, 500));
+form.addEventListener('input', throttle(onTextAreaInput, 500));
 
-form.addEventListener('input', e => {
-    formData[e.target.name] = e.target.value;
-    console.log(formData);
-});
+// form.addEventListener('input', e => {
+//     formData[e.target.name] = e.target.value;
+//     console.log(formData);
+// });
 
 fillInTextarea();
 
